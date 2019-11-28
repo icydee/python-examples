@@ -4,7 +4,7 @@
 
 def fib_recursive(n):
     if n <= 0 or n != int(n) :
-        print ("Number must be a positive integer")
+        #print ("Number must be a positive integer")
         return 0
     elif n==1 :
         # first in series

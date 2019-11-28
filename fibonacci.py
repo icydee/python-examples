@@ -52,7 +52,7 @@ def fib_optimize(n):
 # xrange creates an iterator (each number generated when needed)
 # python3 'range' is python2 'xrange' ie an iterator
 
-index = int(input('Give the index: '))
-print ("Recursive :"+str(fib_recursive(index)))
-print ("Dynamic   :"+str(fib_dynamic(index)))
-print ("Optimize  :"+str(fib_optimize(index)))
+#index = int(input('Give the index: '))
+#print ("Recursive :"+str(fib_recursive(index)))
+#print ("Dynamic   :"+str(fib_dynamic(index)))
+#print ("Optimize  :"+str(fib_optimize(index)))

@@ -6,8 +6,9 @@
 class fib_exception(Exception):
     pass
 
-def fib_recursive(n):
-    if n <= 0 or n != int(n) :
+def fib_recursive(input):
+    n = int(input)
+    if n <= 0 or n != input :
         raise fib_exception()
     elif n==1 :
         # first in series
@@ -20,8 +21,9 @@ def fib_recursive(n):
         return fib_recursive(n-2)+fib_recursive(n-1)
 
 fib_array = [0,1]
-def fib_dynamic(n):
-    if n <= 0 or n != int(n):
+def fib_dynamic(input):
+    n = int(input)
+    if n <= 0 or n != input:
         raise fib_exception()
     elif n == 0:
         return 0
@@ -35,14 +37,13 @@ def fib_dynamic(n):
         return temp_fib
 
 # optimise for size
-def fib_optimize(n):
+def fib_optimize(input):
+    n = int(input)
     a = 0
     b = 1
-    if (n <= 0):
+    if n <= 0 or n != input:
         raise fib_exception()
-    elif n == 0:
-        return a
-    elif n == 1:
+    if n == 1:
         return b
     else:
         for i in range(2,n+1):
@@ -51,11 +52,3 @@ def fib_optimize(n):
             b = c
         return c
 
-# Note than 'range' in python2 returns a list (calculated in one go)
-# xrange creates an iterator (each number generated when needed)
-# python3 'range' is python2 'xrange' ie an iterator
-
-#index = int(input('Give the index: '))
-#print ("Recursive :"+str(fib_recursive(index)))
-#print ("Dynamic   :"+str(fib_dynamic(index)))
-#print ("Optimize  :"+str(fib_optimize(index)))

@@ -4,7 +4,12 @@
 
 from fibonacci import fib_recursive,fib_dynamic,fib_optimize,fib_exception
 
-index = int(input('Give the index: '))
-print ("Dynamic   :"+str(fib_dynamic(index)))
-print ("Optimize  :"+str(fib_optimize(index)))
-print ("Recursive :"+str(fib_recursive(index)))
+index = input('Give the index: ')
+
+for test in [fib_dynamic, fib_optimize, fib_recursive]:
+    try:
+        fib = test(float(index))
+        print ("FIB %s = %s" % ( index, fib ))
+    except fib_exception:
+        print ("Input must be a positive integer")
+

@@ -1,6 +1,7 @@
 #!/usr/local/bin/python3
 
 # Python 2.6 script to calculate fibonacci number
+# Raises exception if invalid input is given
 
 class fib_exception(Exception):
     pass
@@ -33,6 +34,7 @@ def fib_dynamic(n):
         fib_array.append(temp_fib)
         return temp_fib
 
+# optimise for size
 def fib_optimize(n):
     a = 0
     b = 1

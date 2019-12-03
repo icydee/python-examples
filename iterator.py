@@ -1,6 +1,9 @@
 #!/usr/local/bin/python3
 #
 # Create a fibionnaci iterator
+
+import time
+
 class IterateFibonacci:
     def __iter__(self):
         self.minus_2 = 0
@@ -16,6 +19,9 @@ class IterateFibonacci:
 myclass = IterateFibonacci()
 myiter = iter(myclass)
 
-for a in range(20):
-    print(next(myiter))
+#for a in range(20):
+#    print(next(myiter))
 
+for a in myclass:
+    print(a)
+    time.sleep(1)
